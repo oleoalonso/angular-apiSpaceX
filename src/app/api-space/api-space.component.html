@@ -1,13 +1,13 @@
 <section class="d-flex align-items-center justify-content-center flex-wrap">
-  <div class="card mx-2 my-2" style="width: 18rem;" *ngFor="let p of personagens">
-    <img [src]="p.links.mission_patch_small" class="card-img-top" alt="...">
+  <div class="card mx-2 my-2" style="width: 18rem;" *ngFor="let lista of listarMissao">
+    <img [src]="lista.links.mission_patch_small" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Missão: {{ p.mission_name }}</h5>
+      <h5 class="card-title">Missão: {{ lista.mission_name }}</h5>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item"><b>Ano:</b> {{ p.launch_year }}</li>
-      <li class="list-group-item"><b>Data:</b> {{ p.launch_date_utc }}</li>
-      <li class="list-group-item"><b>Vídeo do lançamento:</b> {{ p.links.video_link }}</li>
+      <li class="list-group-item"><b>Ano:</b> {{ lista.launch_year }}</li>
+      <li class="list-group-item"><b>Data:</b> {{ lista.launch_date_utc }}</li>
+      <li class="list-group-item"><b>Vídeo do lançamento:</b> {{ lista.links.video_link }}</li>
     </ul>
   </div>
 </section>

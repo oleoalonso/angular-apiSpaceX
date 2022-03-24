@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./api-space.component.css']
 })
 export class ApiSpaceComponent implements OnInit {
-  personagens: Array<any> = [];
+  listarMissao: Array<any> = [];
 
   constructor(private apiSpaceService: ApiSpaceService) { }
 
@@ -18,7 +18,7 @@ export class ApiSpaceComponent implements OnInit {
   getList() {
     this.apiSpaceService.getList().subscribe(result => {
       console.log(result);
-      this.personagens = result;
+      this.listarMissao = result;
     })
   }
 
